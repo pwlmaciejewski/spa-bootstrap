@@ -1,0 +1,96 @@
+version: 2
+jobs:
+  test:
+    docker:
+      - image: circleci/node:10.6
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v2-dependencies-{{ checksum "package.json" }}
+            - v2-dependencies-
+
+      - run: 
+          name: Install dependencies
+          command: yarn install --production=false
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v2-dependencies-{{ checksum "package.json" }}
+
+      - run:
+          name: Lint
+          command: yarn lint
+
+      - run:
+          name: Test
+          command: yarn test --ci --testResultsProcessor="jest-junit" --coverage
+          environment:
+            JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
+
+      - store_test_results:
+          path: reports/junit
+
+      - store_artifacts:
+          path: reports/junit
+
+      - store_artifacts:
+          path: coverage
+  
+  deploy:
+    docker:
+      - image: circleci/node:10.6
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v2-dependencies-{{ checksum "package.json" }}
+            - v2-dependencies-
+
+      - run: 
+          name: Install dependencies
+          command: yarn install --production=false
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v2-dependencies-{{ checksum "package.json" }}
+
+      - run:
+          name: Build
+          command: yarn build:prod
+
+      - run: 
+          name: Add Git username
+          command: git config user.name "CircleCI"
+
+      - run: 
+          name: Add Git email
+          command: git config user.email "foo@bar.com"
+
+      - run:
+          name: Stage changes
+          command: git add -f dist
+
+      - run:
+          name: Commit changes
+          command: git commit -m "build"
+
+      - run:
+          name: Push changes
+          command: git push -f https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_PROJECT_NAME.git master
+
+workflows:
+  version: 2
+  test_and_deploy:
+    jobs:
+      - test
+      - deploy:
+          requires:
+            - test
+          filters:
+            branches:
+              only: master
