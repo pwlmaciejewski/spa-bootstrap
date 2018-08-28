@@ -145,6 +145,12 @@
   dependencies:
     redux-saga "*"
 
+"@types/redux-thunk@^2.1.0":
+  version "2.1.0"
+  resolved "http://registry.npmjs.org/@types/redux-thunk/-/redux-thunk-2.1.0.tgz#bc2b6e972961831afb82a9bf4f06726e351f9416"
+  dependencies:
+    redux-thunk "*"
+
 "@types/redux@^3.6.0":
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/@types/redux/-/redux-3.6.0.tgz#f1ebe1e5411518072e4fdfca5c76e16e74c1399a"
@@ -5591,9 +5597,20 @@ reduce-function-call@^1.0.1, reduce-function-call@^1.0.2:
   dependencies:
     balanced-match "^0.4.2"
 
+redux-fsa-resource@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/redux-fsa-resource/-/redux-fsa-resource-0.0.1.tgz#6dd9f2abc9af742769e9672a78e93f99ab35b311"
+  dependencies:
+    object-hash "^1.3.0"
+    typescript-fsa "^3.0.0-beta-2"
+
 redux-saga@*:
   version "0.16.0"
   resolved "https://registry.yarnpkg.com/redux-saga/-/redux-saga-0.16.0.tgz#0a231db0a1489301dd980f6f2f88d8ced418f724"
+
+redux-thunk@*, redux-thunk@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.3.0.tgz#51c2c19a185ed5187aaa9a2d08b666d0d6467622"
 
 redux@*, redux@^4.0.0:
   version "4.0.0"

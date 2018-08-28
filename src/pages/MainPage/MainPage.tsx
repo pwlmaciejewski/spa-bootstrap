@@ -17,7 +17,7 @@ interface Props {
 
 class MainPage extends React.Component<Props> {
   componentDidMount () {
-    getAllBreeds()
+    this.props.getAllBreeds()
   }
 
   render () {
@@ -37,7 +37,7 @@ class MainPage extends React.Component<Props> {
 
 export default connect(
   (state: StoreState) => ({
-    breeds: state.breeds['all'] || breeds.defaultResource('all')
+    breeds: state.breeds['all'] || breeds.create('all')
   }), {
     getAllBreeds
   }
