@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux'
-import rootReducer from './reducers'
+import rootReducer from './modules'
 import thunk from 'redux-thunk'
+import api, { Api } from '@/api'
 
 declare global {
   interface Window {
@@ -9,11 +10,19 @@ declare global {
   }
 }
 
+export interface ExtraArgs {
+  api: Api
+}
+
+const extraArgs: ExtraArgs = {
+  api
+}
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const store = createStore(
   rootReducer,
-  composeEnhancers(applyMiddleware(thunk))
+  composeEnhancers(applyMiddleware(thunk.withExtraArgument(extraArgs)))
 )
 
 export default store

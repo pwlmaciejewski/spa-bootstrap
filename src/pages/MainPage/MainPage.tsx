@@ -2,17 +2,13 @@ import * as classNames from 'classnames/bind'
 import * as React from 'react'
 import * as styles from './MainPage.styl'
 import { connect } from 'react-redux'
-import { StoreState } from '@/reducers'
-import { getAllBreeds } from '@/actionCreators/dogs'
-import { Resource, defaultResource } from 'redux-fsa-resource/lib';
-import { Breed } from '@/models/dogs'
-import { breeds } from '@/resources'
+import { State as StoreState, getAllBreeds } from '@/modules'
 
 const cx = classNames.bind(styles)
 
 interface Props {
   getAllBreeds: typeof getAllBreeds
-  breeds: Resource<Breed[]>
+  breeds: StoreState['dogs']['breeds']
 }
 
 class MainPage extends React.Component<Props> {
@@ -37,7 +33,7 @@ class MainPage extends React.Component<Props> {
 
 export default connect(
   (state: StoreState) => ({
-    breeds: state.breeds['all'] || breeds.create('all')
+    breeds: state.dogs.breeds
   }), {
     getAllBreeds
   }

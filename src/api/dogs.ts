@@ -1,15 +1,23 @@
 import { Breed, SubBreed } from '@/models/dogs'
 
-const baseUrl = 'https://dog.ceo/api'
+export interface Api {
+  getAllBreeds(): Promise<Breed[]>
+}
 
-const parseDogBreeds = (data: any): Breed[] =>
-  Object.entries(data.message).map(([name, subBreedsNames]: [string, string[]]): Breed => ({
-    name,
-    subBreeds: subBreedsNames.map((name: string): SubBreed => ({ name }))
-  }))
+export default class implements Api {
+  private BASE_URL = 'https://dog.ceo/api'
 
-export const getAllBreeds = async () => {
-  const breeds = await fetch(baseUrl + '/breeds/list/all')
-  const json = await breeds.json()
-  return parseDogBreeds(json)
+  getAllBreeds = async () => {
+    const breeds = await fetch(this.url('/breeds/list/all'))
+    const json = await breeds.json()
+    return this.parseDogBreeds(json)
+  }
+
+  private url = (path: string) => this.BASE_URL + '/breeds/list/all'
+
+  private parseDogBreeds = (data: any): Breed[] =>
+    Object.entries(data.message).map(([name, subBreedsNames]: [string, string[]]): Breed => ({
+      name,
+      subBreeds: subBreedsNames.map((name: string): SubBreed => ({ name }))
+    }))
 }
