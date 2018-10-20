@@ -65,8 +65,11 @@ module.exports = {
       inject: false,
       template: require('html-webpack-template'),
       appMountId: 'root',
-      title: 'React.js Bootstrap',
-      mobile: true
+      title: 'SPA Bootstrap',
+      mobile: true,
+      links: [
+        'https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:300,400'
+      ],
     })
   ]
 }

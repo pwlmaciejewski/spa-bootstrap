@@ -3,6 +3,8 @@ import * as React from 'react'
 import * as styles from './MainPage.styl'
 import { connect } from 'react-redux'
 import { State as StoreState, getAllBreeds } from '@/modules'
+import { Loader } from 'semantic-ui-react';
+import { BreedList } from '@/components';
 
 const cx = classNames.bind(styles)
 
@@ -18,15 +20,16 @@ class MainPage extends React.Component<Props> {
 
   render () {
     return (
-      <div>bla</div>
-      // <GetAllBreeds>
-      //   {({ fetching, failed, data }: RenderProps<Breed[]>) => {
-      //     if (fetching) return <div>Loading...</div>
-      //     if (failed) return <div>Error</div>
-      //     if (!data) return null
-      //     return <BreedList breeds={data} className={cx('breeds')} />
-      //   }}
-      // </GetAllBreeds>
+      <div className={cx('main-page')}>
+        <h1 className={cx('header')}>Dog breeds</h1>
+        <div className={cx('breed-list-wrapper')}>
+          {this.props.breeds.pending || !this.props.breeds.result ? (
+            <Loader />
+          ) : (
+            <BreedList breeds={this.props.breeds.result} className={cx('breed-list')} />
+          )}
+        </div>
+      </div>
     )
   }
 }

@@ -1,1 +1,1 @@
-export { default as BreedList } from './BreedList'
+export { default as BreedList } from './BreedList/BreedList'

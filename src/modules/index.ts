@@ -1,6 +1,5 @@
 import dogs, { State as DogsState } from './dogs'
-import { combineReducers } from 'redux'
-import { Reducer } from 'redux'
+import { combineReducers, Reducer } from 'redux'
 
 export * from './dogs'
 

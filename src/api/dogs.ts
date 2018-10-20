@@ -1,7 +1,7 @@
 import { Breed, SubBreed } from '@/models/dogs'
 
 export interface Api {
-  getAllBreeds(): Promise<Breed[]>
+  getAllBreeds (): Promise<Breed[]>
 }
 
 export default class implements Api {
