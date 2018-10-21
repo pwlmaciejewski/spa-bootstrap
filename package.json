@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node server.js",
     "lint": "tslint --project tsconfig.json",
-    "build": "webpack --config webpack/dev.config.js",
+    "build": "webpack",
     "start:dev": "webpack-dev-server --hot --inline --content-base=src --watch --history-api-fallback --display minimal",
     "test": "jest"
   },
