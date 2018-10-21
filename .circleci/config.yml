@@ -11,7 +11,7 @@ jobs:
             - v2-dependencies-{{ checksum "package.json" }}
             - v2-dependencies-
 
-      - run: 
+      - run:
           name: Install dependencies
           command: yarn install --production=false
 
@@ -38,7 +38,7 @@ jobs:
 
       - store_artifacts:
           path: coverage
-  
+
   deploy:
     docker:
       - image: circleci/node:10.6
@@ -50,7 +50,7 @@ jobs:
             - v2-dependencies-{{ checksum "package.json" }}
             - v2-dependencies-
 
-      - run: 
+      - run:
           name: Install dependencies
           command: yarn install --production=false
 
@@ -61,13 +61,13 @@ jobs:
 
       - run:
           name: Build
-          command: yarn build:prod
+          command: yarn build
 
-      - run: 
+      - run:
           name: Add Git username
           command: git config user.name "CircleCI"
 
-      - run: 
+      - run:
           name: Add Git email
           command: git config user.email "foo@bar.com"
 
