@@ -1,4 +1,4 @@
-# SPA Bootstrap
+# SPA Bootstrap [![CircleCI](https://circleci.com/gh/pwlmaciejewski/spa-bootstrap.svg?style=svg)](https://circleci.com/gh/pwlmaciejewski/spa-bootstrap)
 
 Opinionated Single Page App bootstrap project.
 
