@@ -1,21 +1,25 @@
 import * as classNames from 'classnames/bind'
 import * as React from 'react'
 import * as styles from './MainPage.styl'
-import { connect } from 'react-redux'
-import { State as StoreState, getAllBreeds } from '@/modules'
 import { Loader } from 'semantic-ui-react';
 import { BreedList } from '@/components';
+import { observer, inject } from 'mobx-react'
+import { DogsStore } from '@/stores/dogs'
+import { RootStore } from '@/stores'
 
 const cx = classNames.bind(styles)
 
 interface Props {
-  getAllBreeds: typeof getAllBreeds
-  breeds: StoreState['dogs']['breeds']
+  dogs: DogsStore
 }
 
-class MainPage extends React.Component<Props> {
+@inject((rootStore: RootStore) => ({
+  dogs: rootStore.dogs
+}))
+@observer
+export default class extends React.Component<Props> {
   componentDidMount () {
-    this.props.getAllBreeds()
+    this.props.dogs.getAllBreeds()
   }
 
   render () {
@@ -23,21 +27,13 @@ class MainPage extends React.Component<Props> {
       <div className={cx('main-page')}>
         <h1 className={cx('header')}>Dog breeds</h1>
         <div className={cx('breed-list-wrapper')}>
-          {this.props.breeds.pending || !this.props.breeds.result ? (
-            <Loader />
+          {this.props.dogs.request.pending || !this.props.dogs.breeds.length ? (
+            <Loader active={true} />
           ) : (
-            <BreedList breeds={this.props.breeds.result} className={cx('breed-list')} />
+            <BreedList breeds={this.props.dogs.breeds} className={cx('breed-list')} />
           )}
         </div>
       </div>
     )
   }
 }
-
-export default connect(
-  (state: StoreState) => ({
-    breeds: state.dogs.breeds
-  }), {
-    getAllBreeds
-  }
-)(MainPage)

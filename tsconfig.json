@@ -12,6 +12,8 @@
     "types": [
       "node"
     ],
+    "sourceMap": true,
+    "experimentalDecorators": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": true,

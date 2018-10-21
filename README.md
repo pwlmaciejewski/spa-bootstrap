@@ -7,8 +7,7 @@ Opinionated Single Page App bootstrap project.
 * Typescript
 * React.js
 * React-Router
-* Redux
-* Redux-Thunk
+* MobX
 * SemanticUI
 * Stylus
 * CSS Modules
