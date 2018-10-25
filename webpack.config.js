@@ -35,28 +35,6 @@ module.exports = {
           { loader: "style-loader" },
           { loader: "css-loader" }
         ]
-      }, {
-        test: /\.styl/,
-        use: [
-          { loader: "style-loader" },
-          {
-            loader: "css-loader",
-            options: {
-              modules: true,
-              localIdentName: '[name]--[local]--[hash:base64]'
-            }
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: () => [
-                require('postcss-cssnext')(),
-                require('postcss-class-repeat')({ repeat: 3 })
-              ]
-            }
-          },
-          { loader: 'stylus-loader' }
-        ]
       }
     ]
   },

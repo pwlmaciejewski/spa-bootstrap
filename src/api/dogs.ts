@@ -13,7 +13,7 @@ export default class implements Api {
     return this.parseDogBreeds(json)
   }
 
-  private url = (path: string) => this.BASE_URL + '/breeds/list/all'
+  private url = (path: string) => this.BASE_URL + path
 
   private parseDogBreeds = (data: any): Breed[] =>
     Object.entries(data.message).map(([name, subBreedsNames]: [string, string[]]): Breed => ({

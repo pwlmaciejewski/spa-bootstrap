@@ -9,8 +9,7 @@ Opinionated Single Page App bootstrap project.
 * React-Router
 * MobX
 * SemanticUI
-* Stylus
-* CSS Modules
+* Styled components
 * Webpack
 * Jest
 * Enzyme

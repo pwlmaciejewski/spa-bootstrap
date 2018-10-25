@@ -5,12 +5,16 @@ import { BrowserRouter } from 'react-router-dom'
 import Routes from './Routes'
 import { Provider } from 'mobx-react'
 import RootStore from '@/stores'
+import GlobalStyle from './GlobalStyle'
 
 ReactDOM.render(
-  <BrowserRouter>
-      <Provider {...new RootStore()}>
-        <Routes />
-      </Provider>
-  </BrowserRouter>,
+  <>
+    <GlobalStyle />
+    <BrowserRouter>
+        <Provider {...new RootStore()}>
+          <Routes />
+        </Provider>
+    </BrowserRouter>
+  </>,
   document.getElementById('root')
 )
