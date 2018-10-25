@@ -1,8 +1,10 @@
 # SPA Bootstrap [![CircleCI](https://circleci.com/gh/pwlmaciejewski/spa-bootstrap.svg?style=svg)](https://circleci.com/gh/pwlmaciejewski/spa-bootstrap)
 
-Opinionated Single Page App bootstrap project.
+An opinionated Single Page App bootstrap project. Just right for weekend projects.
 
 ## Tech stack
+
+Hand-picked with simplicity in mind.
 
 * Typescript
 * React.js
