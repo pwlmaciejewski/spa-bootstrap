@@ -4992,9 +4992,9 @@ react-redux@5.0.7:
     loose-envify "^1.1.0"
     prop-types "^15.6.0"
 
-react-request@3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/react-request/-/react-request-3.1.1.tgz#d96b4b8e3f88fe79d274ad7b5c929b7a23428590"
+react-request@3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/react-request/-/react-request-3.1.2.tgz#71473994c8a05e160f15919a6cf687435d70c97d"
   dependencies:
     fetch-dedupe "^3.0.0"
     prop-types "^15.6.0"
