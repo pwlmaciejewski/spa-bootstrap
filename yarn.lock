@@ -184,9 +184,9 @@
   dependencies:
     "@types/react" "*"
 
-"@types/sinon@5.0.5":
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-5.0.5.tgz#de600fa07eb1ec9d5f55669d5bac46a75fc88115"
+"@types/sinon@5.0.7":
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-5.0.7.tgz#0d9f89dd0c9988c4f1505a92a3a324ee7bdb18a6"
 
 "@types/styled-components@4.1.4":
   version "4.1.4"
