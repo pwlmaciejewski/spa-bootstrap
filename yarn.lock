@@ -116,9 +116,9 @@
     "@types/cheerio" "*"
     "@types/react" "*"
 
-"@types/fetch-mock@6.0.4":
-  version "6.0.4"
-  resolved "https://registry.yarnpkg.com/@types/fetch-mock/-/fetch-mock-6.0.4.tgz#fbe20ab0cc151fe67b2e1b71e7ef29a986a90f1f"
+"@types/fetch-mock@6.0.5":
+  version "6.0.5"
+  resolved "https://registry.yarnpkg.com/@types/fetch-mock/-/fetch-mock-6.0.5.tgz#acbc6771d43d7ebc1f0a8b7e3d57147618f8eacb"
 
 "@types/history@*":
   version "4.7.0"
