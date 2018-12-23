@@ -177,9 +177,9 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/react@16.4.9":
-  version "16.4.9"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.4.9.tgz#98b4dba5a0419dbd594f5dbbb2479e1e153431bb"
+"@types/react@16.7.18":
+  version "16.7.18"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.7.18.tgz#f4ce0d539a893dd61e36cd11ae3a5e54f5a48337"
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
