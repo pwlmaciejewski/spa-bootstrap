@@ -64,7 +64,7 @@
     "semantic-ui-react": "0.84.0",
     "spa-server": "1.0.0",
     "styled-components": "4.1.3",
-    "typescript": "3.0.1",
+    "typescript": "3.2.2",
     "typescript-fsa": "3.0.0-beta-2"
   },
   "jest": {
