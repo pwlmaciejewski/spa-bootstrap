@@ -27,7 +27,7 @@
     "@types/recompose": "0.26.3",
     "@types/sinon": "5.0.7",
     "@types/styled-components": "4.1.4",
-    "css-loader": "1.0.1",
+    "css-loader": "2.0.2",
     "enzyme": "3.8.0",
     "enzyme-adapter-react-16": "1.7.1",
     "fetch-mock": "7.1.0",
