@@ -8,13 +8,15 @@ import RootStore from '@/stores'
 import GlobalStyle from './GlobalStyle'
 
 ReactDOM.render(
-  <>
-    <GlobalStyle />
-    <BrowserRouter>
-        <Provider {...new RootStore()}>
-          <Routes />
-        </Provider>
-    </BrowserRouter>
-  </>,
+  (
+    <>
+      <GlobalStyle />
+      <BrowserRouter>
+          <Provider {...new RootStore()}>
+            <Routes />
+          </Provider>
+      </BrowserRouter>
+    </>
+  ),
   document.getElementById('root')
 )
