@@ -61,7 +61,7 @@
     "react-router-dom": "5.0.0",
     "recompose": "0.28.0",
     "semantic-ui-css": "2.4.1",
-    "semantic-ui-react": "0.86.0",
+    "semantic-ui-react": "0.87.0",
     "spa-server": "1.0.0",
     "styled-components": "4.2.0",
     "typescript": "3.4.5",
