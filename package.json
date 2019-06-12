@@ -25,7 +25,7 @@
     "@types/react-router": "5.0.1",
     "@types/react-router-dom": "4.3.3",
     "@types/recompose": "0.26.3",
-    "@types/sinon": "7.0.12",
+    "@types/sinon": "7.0.13",
     "@types/styled-components": "4.1.16",
     "css-loader": "3.0.0",
     "enzyme": "3.10.0",
