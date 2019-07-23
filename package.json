@@ -21,7 +21,7 @@
     "@types/jest": "24.0.15",
     "@types/ramda": "0.26.18",
     "@types/react": "16.8.23",
-    "@types/react-dom": "16.8.4",
+    "@types/react-dom": "16.8.5",
     "@types/react-router": "5.0.3",
     "@types/react-router-dom": "4.3.4",
     "@types/recompose": "0.26.3",
