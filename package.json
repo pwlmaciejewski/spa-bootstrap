@@ -15,8 +15,6 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@types/enzyme": "3.10.3",
-    "@types/enzyme-adapter-react-16": "1.0.5",
     "@types/fetch-mock": "7.3.1",
     "@types/jest": "24.0.18",
     "@types/ramda": "0.26.22",
@@ -24,12 +22,8 @@
     "@types/react-dom": "16.9.0",
     "@types/react-router": "5.0.5",
     "@types/react-router-dom": "4.3.5",
-    "@types/recompose": "0.26.3",
-    "@types/sinon": "7.0.13",
     "@types/styled-components": "4.1.16",
     "css-loader": "3.2.0",
-    "enzyme": "3.10.0",
-    "enzyme-adapter-react-16": "1.14.0",
     "fetch-mock": "7.3.9",
     "file-loader": "4.2.0",
     "html-webpack-plugin": "3.2.0",
@@ -37,7 +31,6 @@
     "jest": "24.1.0",
     "jest-cli": "24.1.0",
     "jest-junit": "8.0.0",
-    "sinon": "7.5.0",
     "style-loader": "1.0.0",
     "ts-jest": "24.1.0",
     "ts-loader": "6.1.2",
@@ -50,8 +43,6 @@
     "webpack-dev-server": "3.8.1"
   },
   "dependencies": {
-    "mobx": "5.9.4",
-    "mobx-react": "5.4.4",
     "ramda": "0.26.1",
     "react": "16.9.0",
     "react-dom": "16.9.0",
@@ -59,7 +50,7 @@
     "react-request": "3.1.2",
     "react-router": "5.0.1",
     "react-router-dom": "5.0.1",
-    "recompose": "0.28.0",
+    "redux": "^4.0.4",
     "semantic-ui-css": "2.4.1",
     "semantic-ui-react": "0.87.1",
     "spa-server": "1.0.0",
