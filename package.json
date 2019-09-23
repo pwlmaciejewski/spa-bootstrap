@@ -37,7 +37,7 @@
     "jest": "24.1.0",
     "jest-cli": "24.1.0",
     "jest-junit": "8.0.0",
-    "sinon": "7.4.2",
+    "sinon": "7.5.0",
     "style-loader": "1.0.0",
     "ts-jest": "24.1.0",
     "ts-loader": "6.1.2",
