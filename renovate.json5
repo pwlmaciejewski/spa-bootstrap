@@ -14,5 +14,5 @@
   }, {
     depTypeList: ['dependencies'],
     stabilityDays: 7
-  }
+  }]
 }
