@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  prConcurrentLimit: 5,
+  prCreation: 'not-pending',
+  masterIssue: true,
+  separateMajorMinor: true,
+  separateMinorPatch: true,
+  packageRules: [{
+    depTypeList: ['devDependencies'],
+    automerge: true,
+    stabilityDays: 2,
+  }, {
+    depTypeList: ['dependencies'],
+    stabilityDays: 7
+  }
+}
