@@ -1,8 +1,8 @@
-export interface Breed {
+export type DogBreed {
   name: string
   subBreeds: SubBreed[]
 }
 
-export interface SubBreed {
+export type SubBreed {
   name: string
 }
